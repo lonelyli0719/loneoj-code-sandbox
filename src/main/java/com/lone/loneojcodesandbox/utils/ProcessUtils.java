@@ -36,7 +36,7 @@ public class ProcessUtils {
                 //逐行读取
                 String compileOutputLine;
                 while((compileOutputLine= bufferedReader.readLine())!=null){
-                    compileOutputStringBuilder.append(compileOutputLine);
+                    compileOutputStringBuilder.append(compileOutputLine).append("\n");
                 }
                 executeMessage.setMessage(compileOutputStringBuilder.toString());
                 System.out.println(compileOutputStringBuilder);
@@ -49,7 +49,7 @@ public class ProcessUtils {
                 //逐行读取
                 String compileOutputLine;
                 while((compileOutputLine= bufferedReader.readLine())!=null){
-                    compileOutputStringBuilder.append(compileOutputLine);
+                    compileOutputStringBuilder.append(compileOutputLine).append("\n");
                 }
                 executeMessage.setMessage(compileOutputStringBuilder.toString());
                 //分批获取进程的错误输出
@@ -58,7 +58,7 @@ public class ProcessUtils {
                 //逐行读取
                 String errorCompileOutputLine;
                 while((errorCompileOutputLine= errorBufferedReader.readLine())!=null){
-                    errorCompileOutputStringBuilder.append(errorCompileOutputLine);
+                    errorCompileOutputStringBuilder.append(errorCompileOutputLine).append("\n");
                 }
                 executeMessage.setErrorMessage(errorCompileOutputStringBuilder.toString());
             }
